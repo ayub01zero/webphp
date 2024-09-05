@@ -167,15 +167,15 @@ function mailer($for,$subject,$body){
         $mail->isSMTP();                                            //Send using SMTP
         $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 'ayubm.mohammed01@gmail.com';                     //SMTP username
-        $mail->Password   = 'acobbpjpnqnpuolx';                               //SMTP password
+        $mail->Username   = 'email-me';                     //SMTP username
+        $mail->Password   = '';                               //SMTP password
         $mail->SMTPSecure ='ssl';            //Enable implicit TLS encryption
         $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
     
         //Recipients
-        $mail->setFrom('ayubm.mohammed01@gmail.com', 'FoodOrder message');
+        $mail->setFrom('email-me', 'FoodOrder message');
         $mail->addAddress($for);     //Add a recipient
-        $mail->addReplyTo('ayubm.mohammed01@gmail.com', 'Account Recovery');
+        $mail->addReplyTo('email-me', 'Account Recovery');
       
      
     
