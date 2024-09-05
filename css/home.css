@@ -1,0 +1,388 @@
+.waviy {
+    position: relative;
+    display: inline-block;
+  }
+  .waviy h1 {
+    position: relative;
+    display: inline-block;
+    color: #ff6c57;
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+  }
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }
+  #myBtn {
+  
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #ff6c57; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 25px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  
+  }
+  
+  
+  #myBtn:hover {
+  
+    color: #4eb060;
+  
+  }
+  
+     h1{
+      text-shadow: 0px 0px 0px rgba(255,255,255,1), 
+               0px 0px 4px rgba(255,255,255,1), 
+               0px 0px 20px rgba(255,255,255,1), 
+               0px 0px 50px rgba(255,255,255,1);
+     }
+        .imagemove{
+          animation: myimage 3s linear infinite ;
+    
+          animation-duration: alternate;
+        
+        }
+        @keyframes myimage {
+  
+          0%, 100%{
+          transform: translateY(0px);
+      }
+      50%{
+          transform: translateY(20px);
+      }
+  }
+  
+  .hiddenn{
+    opacity: 0;
+    filter: blur( 5px);
+    transform: translateX(-100%);
+    transition: all 1.5s;
+  }
+  .show{
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0);
+  }
+  
+  
+  
+  
+  .loader-container{
+      position: fixed;
+      top:0; left:0;
+      height:100%; 
+      width:100%;
+      z-index: 10000;
+      background:#fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+  }
+  
+  .loader-container img{
+      width:35rem;
+  }
+  
+  .loader-container.fade-out{
+      top:-110%;
+      opacity:0;
+  }
+  
+  /* finish load  */
+  
+  
+          #hero {
+    width: 100%;
+    height: 100vh!important;
+  }
+  
+  #hero .container {
+    padding-top: 70px!important;
+   
+  }
+  
+  #hero h1 {
+    margin: 0;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #ff6c57!important;
+    text-transform: uppercase;
+  }
+  
+  #hero h2 {
+    color: black!important;
+    margin: 10px 0 0 0;
+    font-size: 20px;
+  }
+  
+  #hero .btn-get-started {
+    font-family: "Dosis", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 28px;
+    border-radius: 3px;
+    transition: 0.5s;
+    margin-top: 25px;
+    color: #fff;
+   background-color: #ff6c57;
+    text-transform: uppercase;
+  }
+  
+  #hero .btn-get-started:hover {
+    background:transparent;
+  }
+  
+  @media (max-width: 991px) {
+    #hero {
+      height: 100vh;
+      text-align: center;
+    }
+  
+    #hero .hero-img img {
+      width: 50%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #hero h1 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  
+    #hero h2 {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  
+    #hero .hero-img img {
+      width: 80%;
+    }
+  }
+  
+  img{
+    width: 100%;
+  }
+  
+  /* big image  css  */
+  
+  
+  .hero {
+      background-image: url(../image/foodback.jpg);
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      position: relative;
+    
+      z-index: -3;
+     
+  }
+  
+  
+  .hero::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(21, 20, 51, 0.8);
+      z-index: -5 ;
+  }
+  
+  .text1 {
+    color: white;
+    font-weight: 600;
+    font-size: 40px;
+  }
+  .text2{
+    color: white;
+    font-size: 22px;
+  }
+  
+  .btn1{
+    width: 200px;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 28px;
+    border-radius: 3px;
+    transition: 0.5s;
+    color: #fff;
+   background-color: #ff6c57!important;
+    text-transform: uppercase;
+  }
+  
+  
+  /* service css */
+  
+  section {
+      padding-top: 40px;
+      padding-bottom: 40px;
+  }
+  
+  .card-effect {
+    box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+  
+      padding: 25px;
+      transition: all 0.35s ease;
+  }
+  
+  .card-effect:hover {
+      box-shadow: none;
+      transform: translateY(5px);
+  }
+  
+  /* team css */
+  
+  
+  .team-boxed {
+    color: #313437;
+  
+  }
+  
+  .team-boxed p {
+    color: #7d8285;
+  }
+  
+  .team-boxed h2 {
+    font-weight: bold;
+    margin-bottom: 40px;
+    padding-top: 40px;
+    color: inherit;
+  }
+  
+  @media (max-width:767px) {
+    .team-boxed h2 {
+      margin-bottom: 25px;
+      padding-top: 25px;
+      font-size: 24px;
+    }
+  }
+  
+  .team-boxed .intro {
+    font-size: 16px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .team-boxed .intro p {
+    margin-bottom: 0;
+  }
+  
+  .team-boxed .people {
+    padding: 50px 0;
+  }
+  
+  .team-boxed .item {
+    text-align: center;
+  }
+  
+  .team-boxed .item .box {
+    text-align: center;
+    padding: 30px;
+    background-color: #fff;
+    margin-bottom: 30px;
+    border-radius: 10px;
+  }
+  
+  .team-boxed .item .name {
+    font-weight: bold;
+    margin-top: 28px;
+    margin-bottom: 8px;
+    color: inherit;
+  }
+  
+  .team-boxed .item .title {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #d0d0d0;
+    letter-spacing: 2px;
+    font-size: 13px;
+  }
+  
+  .team-boxed .item .description {
+    font-size: 15px;
+  }
+  
+  .team-boxed .item img {
+    max-width: 160px;
+   
+  }
+  
+  
+  .team-boxed .social {
+    font-size: 18px;
+    color: #a2a8ae;
+  }
+  
+  .team-boxed .social:hover {
+    font-size: 18px;
+    color: #f80808;
+  }
+  
+  .team-boxed .social a {
+    color: inherit;
+    margin: 0 10px;
+    display: inline-block;
+    opacity: 0.7;
+    padding: 6px;
+  }
+  
+  .team-boxed .social a:hover {
+    opacity: 1;
+  }
+  
+  .fa {
+    font-size: 28px;
+  }
+  
+  .intro h1 {
+    color: #fff;
+  }
+  
+  .intro {
+    margin-top: 23px;
+  }
+  
+  .box img {
+    cursor: pointer;
+    width: 9em;
+  }
+  
+  
+  form input.form-control {
+      height: 56px;
+  }
+  
+  
+  form .form-control {
+      border: none!important;
+      border-radius: 0;
+      background-color: rgba(0,0,0,0.02);
+  }
+  
+  
+  @media only screen and (max-width: 600px) {
+  .hero{
+  
+  background-size: contain;
+  background-attachment: fixed;
+  
+  
+  }
+  }
